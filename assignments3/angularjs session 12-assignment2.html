@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+
+    <script src="angular.js"></script>
+	    
+	<title>Assignment </title>
+
+	<script type="text/javascript">
+	
+		var myApp = angular.module('myApp', []);
+
+		myApp.controller('myController', function ($scope) {
+			$scope.showalert= function(){
+				alert("HELLO ACADGILD");
+			}
+		});
+
+		
+	</script>
+
+
+</head>
+
+<body>
+
+<center>
+
+		<div ng-controller="myController">
+			click me once <br />
+			<input type="button" value="Click Me" ng-click="showalert()">
+		</div>
+				
+</center>
+
+
+</body>
+</html>
