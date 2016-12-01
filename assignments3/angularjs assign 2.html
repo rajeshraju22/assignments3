@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>angularjs</title>
+    <script src="script/angular.js"></script>
+    <script src="script/script.js"></script>
+    <style>
+        table, th, td {
+            border: 1px solid grey;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+
+            table tr:nth-child(odd) {
+                background-color: #f1f1f1;
+            }
+
+            table tr:nth-child(even) {
+                background-color: #ffffff;
+            }
+    </style>
+</head>
+<body ng-app="mymodule">
+    <div ng-controller="mycontroller">
+        <table>
+            <thead>
+                <tr>
+                    <th>name</th>
+                    <th>age</th>
+                    <th>employee id</th>
+                    <th>salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="details in details">
+                    <td> {{details.name}} </td>
+                    <td> {{details.age}} </td>
+                    <td> {{details.employeeid}} </td>
+                    <td> {{details.salary}} </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
