@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>angularjs</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+
+</head>
+<body ng-app="myapp">
+    <ul class="nav navbar-nav">
+        <li class="active"><a href="#/index.html">index</a></li>
+        <li><a href="#/home.html">home</a></li>
+        <li><a href=" #/login.html">login</a></li>
+        <li><a href="#/register.html">register</a></li>
+        <li><a href="#/contacts.html">contacts</a></li>
+        <li><a href="#/aboutus.html">aboutus</a></li>
+    </ul>
+    <hr />
+    <hr />
+    <div ng-view>
+    </div>
+        <script>
+       var module = angular.module("myapp", ["ngRoute"])
+    module.config(function ($routeProvider)
+    {
+        $routeProvider
+             .when("/home.html",
+        {
+            templateUrl: "home.html",
+            controller: "homecontroller"
+        })
+            .when("/login.html",
+           {
+               templateUrl: "login.html",
+           })
+             .when("/register.html",
+           {
+               templateUrl: "register.html",
+           })
+           .when("/contacts.html",
+           {
+               templateUrl:"contacts.html"
+           })
+        .when("/aboutus.html",
+               {
+                   templateUrl: "aboutus.html"
+               })
+    });
+    </script>
+</body>
+</html>
